@@ -1,0 +1,19 @@
+---
+title: "Paper Replication"
+author: "Inkyung Cha"
+date: "5/17/2020"
+output:
+  pdf_document: default
+  html_document: default
+---
+### Mertens, Karel and Morten O. Ravn. 2013. "The Dynamic Effects of Personal and Corporate Income Tax Changes in the United States" *American Economic Review* 103(4):1212-1247 "
+
+I ported the Merten and Raven (2013) Matlab code into R. I reproduced Figure 2 and Figure 3, the two main figures of the paper.
+
+* Data file: MR_AER_DATASET.csv
+
+* The doProxySVAR.R: This is the main program that calculates impulse response functions and bootstrap confidence intervals. I used R6 classes. 
+
+* figure2&3.R: This file computes impulse reponse functions for average personal income tax rates (APITR) and average corporate income tax rates (ACITR) on APITR, ACITR, the personal income tax base (APITR shock), the corporate income tax base (ACITR shock), output, personal income tax revenue (APITR shock), corporate income tax revenue (ACITR shock), output, and government purchases. 
+
+* 12 RDS files: These data files hold the IRFs, bootstrap confidence intervals, and the modified variables (personal income tax revenue, APITR shock), and corporate income tax revenue (ACITR shock).
